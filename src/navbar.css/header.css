@@ -1,0 +1,366 @@
+/* Fonts imported form Goggle Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Jura:wght@700&family=Manrope:wght@400;500;600;700&family=Orbitron:wght@700&family=Oxygen:wght@400;700&family=Raleway:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap'); 
+:root {
+  --clr-blue: #003152;
+  --lexicon: #E7EAEA;
+  --green: #3f5d28;
+  --text: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Geneva", Verdana, sans-serif;
+  --text1: Georgia, Times, "Times New Roman", serif;
+  --subHeading: "Courier New", Courier, monospace;
+} 
+html{
+    scroll-behavior: smooth;
+}
+.btn {
+  font-size: 1rem;
+  padding: 0.55em 1em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  margin-left: 1vh;
+  cursor: pointer;
+  max-width: 10rem;
+}
+
+
+/*  navbar button hover code*/
+.top-fill {
+  position: relative;
+  color:rgb(80, 75, 75);
+  border: 2px solid var(--clr-blue);
+  background: transparent;
+  overflow: hidden;
+  transition: color 0.5s ease-in, transform 0.5s ease-in-out,box-shadow 0.8s ease;
+}
+.top-fill::before {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 150px;
+  background: var(--clr-blue);
+  transform: translate(-50px, 58px);
+  transition: transform 0.45s ease-in;
+}
+.top-fill:hover::before {
+  content: "";
+  transform: translate(-50px, -70px);
+  z-index: -1;
+}
+.top-fill:hover {
+  color: rgba(55, 245, 112, 0.884);
+  box-shadow:4px 4px 8px rgba(93, 248, 3, 0.623); /* Adjust shadow values as needed */
+}
+
+.top-fill:active{
+ transform: scale(0.9);
+}
+
+.top-fill1 {
+  position: relative;
+  border: 2px solid var(--clr-blue);
+  color:rgb(80, 75, 75);
+  background: transparent;
+  overflow: hidden;
+  transition: color 0.5s ease-in, transform 0.5s ease-in-out, box-shadow 0.8s ease;
+  
+}
+.top-fill1::before {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 150px;
+  background: var(--clr-blue);
+  transform: translate(-25px, 33px);
+  transition: transform 0.45s ease-in;
+}
+.top-fill1:hover::before {
+  content: "";
+  transform: translate(-25px, -30px);
+  z-index: -1;
+}
+.top-fill1:hover {
+  color: rgba(55, 245, 112, 0.884);
+  background: var(--clr-blue);
+  box-shadow: 4px 4px 8px rgba(93, 248, 3, 0.623); /* Adjust shadow values as needed */
+
+
+}
+.top-fill1:active{
+ transform: scale(0.9);
+}
+
+/*blurring the images bottom to look unsharp*/
+.blur-bottom {
+  position: relative;
+}
+.blur-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height:15px; /* Adjust the height as needed */
+  background: inherit;
+  filter: blur(15px);
+}
+
+.blur-top {
+  position: relative;
+}
+
+.blur-top::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px; /* Adjust the height as needed */
+  background: inherit;
+  filter: blur(20px);
+}
+
+.blur-top1 {
+  position: relative;
+}
+
+.blur-top1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px; /* Adjust the height as needed */
+  background: inherit;
+  filter: blur(10px);
+}
+
+.blur-custom {
+  filter: blur(3px); /* Adjust the pixel value as needed */
+}
+
+/*home page heading and para stylings*/
+.span-color{
+  font-family: var(--text);
+  color: rgb(168, 68, 1);
+}
+
+.headings{
+  font-family: var(--text1);
+  font-size:07vh;
+  font-weight:bolder;
+}
+.background-span {
+  display: inline-block;
+  font-family: var(--text1);
+  background-image: url('/images/blog/textBackground.png'); /* Update the path to your PNG file */
+  background-size: 100%; /* Adjust this as needed */
+  background-repeat: no-repeat;
+  padding: 0 35px; /* Adjust padding to fit your design */
+}
+.justified-text {
+    text-align: justify;
+}
+
+.home-para {
+  font-family: var(--text);
+  font-size: clamp(0.9rem, 2vw, 1.5rem); /* Adjusts min, preferred, and max font size */
+}
+
+/* Adjustments for different screen sizes */
+@media (max-width: 1200px) {
+  .home-para {
+    font-size: clamp(0.8rem, 1.8vw, 1.3rem); /* Adjust for medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .home-para {
+    font-size: clamp(0.7rem, 1.6vw, 1.2rem); /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .home-para {
+    font-size: clamp(0.6rem, 1.4vw, 1rem); /* Adjust for very small screens */
+  }
+}
+
+
+.main-heading {
+  font-family: var(--subHeading); /* Choose your preferred font family */
+  font-weight:bolder; /* Make the text bold */
+  color: #272323; /* Dark gray color */
+  margin: 0 0 30px 0; /* Margin for spacing */
+  font-size:7vh;
+}
+
+.sub-heading {
+  font-family: var(--subHeading); /* Choose your preferred font family */
+  font-weight:bolder; /* Make the text bold */
+  color: #272323; /* Dark gray color */
+  margin: 0 0 30px 0; /* Margin for spacing */
+  font-size:5vh;
+}
+
+.text-3d{
+  text-shadow: 
+  1px 1px 0px #000, 
+  2px 2px 0px #000, 
+  3px 3px 0px #000, 
+  4px 4px 0px #000, 
+  5px 5px 0px #000; /* Create the 3D effect with multiple shadows */
+margin: 20px 0; 
+}
+.text-3d1{
+  text-shadow: 
+        1px 1px 0 #b8afaf, 
+        2px 2px 0 #5e5454, 
+        3px 3px 0 #a59595, 
+        4px 4px 0 #888, 
+        5px 5px 0 #9c9191; /* Create the 3D effect with multiple shadows */
+margin: 20px 0; 
+}
+.subtext-3d{
+  text-shadow: 
+  1px 1px 0px #000, 
+  2px 2px 0px #000, 
+  3px 3px 0px #000, 
+  4px 4px 0px #000, 
+  5px 5px 0px #000; /* Create the 3D effect with multiple shadows */
+margin: 20px 0; 
+}
+.subtext-3d1{
+  text-shadow: 
+  1px 1px 0 #b8afaf, 
+  2px 2px 0 #5e5454, 
+  3px 3px 0 #a59595, 
+  4px 4px 0 #888, 
+  5px 5px 0 #9c9191; /* Create the 3D effect with multiple shadows */
+margin: 20px 0; 
+} 
+
+
+
+
+
+/*two types of glasses for light and dark theme*/
+.glass {
+  width: cover;
+  height: cover;
+  padding: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: -1px -1px 10px rgba(255, 255, 255, 0.3) inset, 2px 2px 20px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 1px rgba(156, 140, 140, 0.949);
+}
+
+.glass:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: inherit;
+  -webkit-filter: blur(3px);
+}
+
+.glass1 {
+  width: cover;
+  height: cover;
+  padding: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: -1px -1px 10px rgba(255, 255, 255, 0.3) inset, 2px 2px 20px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 1px 1px rgba(156, 140, 140, 0.949);
+}
+
+.glass1:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: inherit;
+  -webkit-filter: blur(3px);
+}
+
+/* Adjustments for different screen sizes */
+@media (max-width: 1200px) {
+  .slide-para {
+    font-size: calc(0.9rem + 1.2vw); /* Slightly larger for medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .slide-para {
+    font-size: calc(0.8rem + 1.5vw); /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .slide-para {
+    font-size: calc(0.7rem + 2vw); /* Larger adjustment for small screens */
+  }
+}
+
+
+
+/*two types of glasses for light and dark theme*/
+.glass3 {
+  width: cover;
+  height: cover;
+  padding: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
+  box-sizing: border-box;
+  background: rgba(220, 10, 10, 0.891);
+  box-shadow: -1px -1px 10px rgba(255, 255, 255, 0.3) inset, 2px 2px 20px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 1px rgba(156, 140, 140, 0.949);
+}
+
+.glass3:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: inherit;
+  -webkit-filter: blur(3px);
+}
+
+.glass4 {
+  width: cover;
+  height: cover;
+  padding: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
+  box-sizing: border-box;
+  background: rgba(177, 3, 3, 0.738);
+  box-shadow: -1px -1px 10px rgba(255, 255, 255, 0.3) inset, 2px 2px 20px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 1px 1px rgba(156, 140, 140, 0.949);
+}
+
+.glass4:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: inherit;
+  -webkit-filter: blur(3px);
+}
+.show {
+  display: block;
+}

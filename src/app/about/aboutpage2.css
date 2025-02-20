@@ -1,0 +1,55 @@
+
+
+
+.live-calls-animations {
+    perspective: 1000px
+}
+
+.live-calls-animations .live-calls-bg {
+    position: absolute;
+    max-width: none;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transform: rotateY(-15deg);
+    margin: auto;
+    height: 460px;
+    animation-name: animation-rotate-perspective;
+    animation-duration: 7s
+}
+
+@media (max-width: 768px) {
+    .live-calls-animations .live-calls-bg {
+        position:relative
+    }
+}
+.fourth-line {
+    font-size: 1.2rem;
+    color: gray;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: -10px;
+  }
+
+
+  /*image hover effect*/
+  .img-wrapper {  
+    overflow: hidden; 
+  }
+  
+  .inner-img {
+    transition: 0.3s;
+  }
+  
+  .inner-img:hover {
+    transform: scale(2);
+  }
+  
+  /* Other styling elements, that are not necessary for the example */
+  
+  .img-wrapper {
+    display: inline-block;
+    box-sizing: border-box;
+    //border: 1px solid #000;
+  }
+

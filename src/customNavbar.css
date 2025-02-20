@@ -1,0 +1,101 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* Navbar styles */
+.navbar .navbar-nav .nav-link {
+  color: #0b2c3d;
+}
+
+.navbar{
+  background-color: white;
+ 
+}
+
+.brand {
+  color:#0b2c3d;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family:Kaftan;
+}
+
+ .brand:hover{
+  color: #b39359 !important;
+ }
+ 
+/* General responsive adjustments */
+.nav-link {
+  color:#0b2c3d;
+  font-size:1.2rem;
+  font-weight: bold;
+  font-family:Kaftan;
+
+}
+.nav-link:hover {
+  color: #fff !important;
+}
+.active{
+  font-size: 12px;
+  font-weight:bolder;
+}
+
+@media (max-width: 576px) {
+  .brand {
+    font-size: 1rem;
+    
+  }
+
+  .active {
+    font-size: 0.4rem;
+    font-weight: bold;
+  }
+
+  /* Ensure image and nav-link are on the same line */
+  .navbar-nav {
+    display: flex;
+   
+  }
+
+  /* Remove default margins that cause misalignment */
+  .nav-link,
+  .nav-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Additional spacing adjustment if needed */
+  .nav-item img {
+    margin-right: 4px;
+  }
+}
+
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .second-line,
+  .second-line2 {
+    font-size: 7rem;
+    font-weight: 900;
+  }
+}
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-toggler{
+  background-color: #0b2c3d;
+}
+
+.navbar-toggler-icon{
+  color: #f9f8f6;
+}
